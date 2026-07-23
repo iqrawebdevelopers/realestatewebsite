@@ -696,7 +696,7 @@
 
   const canvas = document.getElementById('hero-canvas');
   const ctx = canvas.getContext('2d');
-  const frameCount = 120;
+  const frameCount = 99;
   const images = new Array(frameCount);
   let loadedCount = 0;
 
@@ -723,7 +723,7 @@
     if(images[i]) return;
     const im = new Image();
     im.decoding = 'async';
-    im.src = `images/hero/frame-${String(i).padStart(3,'0')}.jpg`;
+    im.src = `images/hero/frame-${String(i + 1).padStart(4,'0')}.jpg`;
     images[i] = im;
     im.onload = ()=>{
       loadedCount++;
